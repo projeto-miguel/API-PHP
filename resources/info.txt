@@ -1,6 +1,0 @@
-======================================
-user: user_loja_api
-pass: Or/!vBw]LrSyrXX@
-======================================
-Para importar, executar o arquivo loja_api.sql e criar um usuário com as  informações acima, com todas permissões
-na base de dados loja_api.
