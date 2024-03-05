@@ -43,7 +43,7 @@ if(!$api_logic->check_endpoint()){
     $api_response->api_request_error('ENDPOINT DOES NOT EXIST: ' . $api_response->get_endpoint());
 }
 
-// REQUEST TO THE API_LOGIC
+// REQUEST TO THE ENDPOINT ON API_LOGIC
 $result = $api_logic->{$api_response->get_endpoint()}();//executa o método correspondente ao endpoint
 $api_response->add_to_data('data', $result);
 
