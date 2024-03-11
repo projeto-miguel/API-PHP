@@ -34,6 +34,10 @@ if($results['data']['status'] == 'SUCCESS'){
                     <?php if(count($produtos) == 0): ?>
                         <p>Não há produtos registrados</p>
                     <?php else: ?>
+                        <form action="form-inline" method="">
+                            <input type="text" class="form-control mr-sm-2" placeholder="Pesquisa">
+                        </form>
+                        <p class="text-end">Total: <strong><?= count($produtos) ?></strong></p>
                         <table class="table">
                             <thead class="table-dark">
                                 <tr>
@@ -59,7 +63,6 @@ if($results['data']['status'] == 'SUCCESS'){
                             <?php endforeach; ?>
                             </tbody>
                         </table>
-                        <p class="text-end">Total: <strong><?= count($produtos) ?></strong></p>
                     <?php endif; ?>
                 </div>
             </div>

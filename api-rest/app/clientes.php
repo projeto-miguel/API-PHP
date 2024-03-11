@@ -37,9 +37,11 @@ if($results['data']['status'] == 'SUCCESS'){
                     <?php if(count($clientes) == 0): ?>
                         <p>Não existem clientes registrados.</p>
                     <?php else: ?>
-                        <table class="table">
+                        <p class="text-end">Total: <strong><?= count($clientes) ?></strong></p>
+                        <table class="table table-striped">
                             <thead class="table-dark">
                                 <tr>
+                                    <th>#</th>
                                     <th>Nome</th>
                                     <th>Email</th>
                                     <th>Telefone</th>
@@ -49,6 +51,7 @@ if($results['data']['status'] == 'SUCCESS'){
                             <tbody>
                                 <?php foreach($clientes as $c): ?>
                                     <tr>
+                                        <td><?= $c['id_cliente'] ?></td>
                                         <td><?= $c['nome'] ?></td>
                                         <td><?= $c['email'] ?></td>
                                         <td><?= $c['telefone'] ?></td>
@@ -62,7 +65,6 @@ if($results['data']['status'] == 'SUCCESS'){
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                        <p class="text-end">Total: <strong><?= count($clientes) ?></strong></p>
                     <?php endif; ?>
                 </div>
             </div>
