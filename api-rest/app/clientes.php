@@ -23,6 +23,7 @@ if($results['data']['status'] == 'SUCCESS'){
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Aplicação - Clientes</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/estilo.css">
     </head>
     <body>
         <?php include('inc/navbar.php') ?>
@@ -42,6 +43,7 @@ if($results['data']['status'] == 'SUCCESS'){
                                     <th>Nome</th>
                                     <th>Email</th>
                                     <th>Telefone</th>
+                                    <th>Ações</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -50,10 +52,17 @@ if($results['data']['status'] == 'SUCCESS'){
                                         <td><?= $c['nome'] ?></td>
                                         <td><?= $c['email'] ?></td>
                                         <td><?= $c['telefone'] ?></td>
+                                        <td>
+                                            <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                                <button type="button" class="btn btn-outline-primary">Editar</button>
+                                                <button type="button" class="btn btn-outline-danger">Deletar</button>
+                                            </div>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
+                        <p class="text-end">Total: <strong><?= count($clientes) ?></strong></p>
                     <?php endif; ?>
                 </div>
             </div>
