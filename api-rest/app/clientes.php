@@ -5,7 +5,7 @@ require_once("inc/config.php");
 require_once("inc/api_functions.php");
 require_once("inc/functions.php");
 
-$results = api_request('get_all_clientasdasds','GET');
+$results = api_request('get_all_clients','GET');
 
 if($results['data']['status'] == 'SUCCESS'){
     $clientes = $results['data']['results'];
