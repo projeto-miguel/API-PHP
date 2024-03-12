@@ -30,8 +30,18 @@ if($results['data']['status'] == 'SUCCESS'){
         <section class="container">
             <div class="row">
                 <div class="col">
-                    <h2>Clientes</h2>
+
+                    <div class="row">
+                        <div class="col">
+                            <h2>Clientes</h2>
+                            
+                        </div>
+                        <div class="col text-end">
+
+                        </div>
+                    </div>
                     <hr>
+
 
 
                     <?php if(count($clientes) == 0): ?>
@@ -57,8 +67,8 @@ if($results['data']['status'] == 'SUCCESS'){
                                         <td><?= $c['telefone'] ?></td>
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic outlined example">
-                                                <button type="button" class="btn btn-outline-primary">Editar</button>
-                                                <button type="button" class="btn btn-outline-danger">Deletar</button>
+                                                <a role="button" class="btn btn-outline-primary">Editar</a>
+                                                <a role="button" class="btn btn-outline-danger">Deletar</a>
                                             </div>
                                         </td>
                                     </tr>
