@@ -38,7 +38,7 @@ if($results['data']['status'] == 'SUCCESS'){
                         <table class="table">
                             <thead class="table-dark">
                                 <tr>
-                                    <th>Código</th>
+                                    <th>#</th>
                                     <th>Nome</th>
                                     <th>Quantidade em estoque</th>
                                     <th>Ações</th>

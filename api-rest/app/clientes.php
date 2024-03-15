@@ -36,8 +36,8 @@ if($results['data']['status'] == 'SUCCESS'){
                             <h2>Clientes</h2>
                             
                         </div>
-                        <div class="col text-end">
-
+                        <div class="col text-end align-self-center">
+                            <a role="button" class="btn btn-primary" href="novo_cliente.php">Adicionar cliente</a>
                         </div>
                     </div>
                     <hr>

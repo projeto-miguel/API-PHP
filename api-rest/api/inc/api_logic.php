@@ -204,83 +204,13 @@ class Api_logic{
         ];
     }
     // ===============================================================
-    /* public function create_client(){
-        $sql = "INSERT INTO clientes (nome,email,telefone) VALUES ";
-
-        if(key_exists('name',$this->params)){
-            $sql .= "('" . $this->params['name'] . "',";
-        }else{
-            return [
-                'status' => 'ERROR',
-                'message' => 'USER NAME UNDEFINED',
-                'results' => []
-            ];
-        }
-        
-        if(key_exists('email',$this->params)){
-            if(filter_var($this->params['email'],FILTER_VALIDATE_EMAIL)){
-                $sql .= "'" . $this->params['email'] . "',";
-            }else{
-                return [
-                    'status' => 'ERROR',
-                    'message' => 'USER EMAIL INVALID',
-                    'return' => []
-                ];
-            }
-        }else{
-            return [
-                'status' => 'ERROR',
-                'message' => 'USER EMAIL UNDEFINED',
-                'results' => []
-            ];
-        }
-        
-        if(key_exists('ddd',$this->params)){
-            if(filter_var($this->params['ddd'],FILTER_VALIDATE_INT)){
-                if(key_exists('phone',$this->params)){
-                    if(filter_var($this->params['phone'],FILTER_VALIDATE_INT)){
-                        $ddd = "(" . $this->params['ddd'] . ")";
-                        $phone = $ddd . $this->params['phone'];
-                        $sql .= "'" . $phone . "')";
-                    }else{
-                        return [
-                            'status' => 'ERROR',
-                            'message' => 'USER PHONE INVALID',
-                            'results' => []
-                        ];
-                    }
-                }else{
-                    return [
-                        'status' => 'ERROR',
-                        'message' => 'USER PHONE UNDEFINED',
-                        'results' => []
-                    ];
-                }
-            }else{
-                return [
-                    'status' => 'ERROR',
-                    'message' => 'USER DDD INVALID',
-                    'results' => []
-                ];
-            }
-            
-        }else{
-            return [
-                'status' => 'ERROR',
-                'message' => 'USER DDD UNDEFINED',
-                'results' => []
-            ];
-        }
-
-        $db = new database();
-        $results = $db->EXE_QUERY($sql);
-
-        return [
+    public function create_new_client(){
+        return[
             'status' => 'SUCCESS',
-            'message' => 'API RUNNING OK',
-            'results' => 'CLIENT CREATED SUCCESSFULLY'
+            'message' => 'teste',
+            'results' => $this->params
         ];
-    } */
+    }
     // ===============================================================
 
 
