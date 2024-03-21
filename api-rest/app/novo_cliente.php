@@ -41,21 +41,28 @@ if($_SERVER['REQUEST_METHOD'] ==  'POST'){
     <section class="container">
         <div class="row my-5">
             <div class="col-sm-7 offset-sm-2 card bg-light p-4">
-                <form action="novo_cliente.php" method="post">
+                <form action="novo_cliente.php" method="POST">
+
                     <div class="mb-3">
-                        <label for="t_nome" class="form-label">Nome completo</label>
-                        <input type="text" class="form-control" name="t_nome" autocomplete="off" required>
+                        <label>Nome completo</label>
+                        <input type="text" class="form-control" name="t_nome">
                     </div>
+
                     <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="t_email" autocomplete="off" required>
+                        <label>Telefone</label>
+                        <input type="text" class="form-control" name="t_phone">
                     </div>
+
                     <div class="mb-3">
-                        <label for="t_phone" class="form-label">Telefone</label>
-                        <input type="tel" class="form-control" name="t_phone" autocomplete="off" required>
+                        <label>Email</label>
+                        <input type="text" class="form-control" name="t_email">
                     </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                    <a href="clientes.php" role="button" class="btn btn-secondary">Cancelar</a>
+
+                    <div class="mb-3 text-center">
+                        <a href="clientes.php" role="button" class="btn btn-secondary btn-sm">Cancelar</a>
+                        <input type="submit" class="btn btn-primary btn-sm" value="Cadastrar">
+                    </div>
+
                 </form>
             </div>
         </div>
