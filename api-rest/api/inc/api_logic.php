@@ -204,11 +204,35 @@ class Api_logic{
         ];
     }
     // ===============================================================
-    public function create_new_client(){
+    public function create_new_client(){//FINALIZARR
+
+        if(!isset($this->params['nome']) || !isset($this->params['email']) || !isset($this->params['telefone'])){
+            return [
+                'status'=> 'ERROR',
+                'message'=> 'Informações insuficientes para adicionar cliente',
+                'results'=> []
+            ];
+        }
+
+        $params = [
+            ':nome' => $this->params['nome'],
+            ':email' => $this->params['email'],
+            ':telefone' => $this->params['telefone']
+        ];
+
+        $db = new database();
+        $db->EXE_QUERY("
+            INSERT INTO clientes (nome,email,telefone) VALUES (
+                :nome,
+                :email,
+                :telefone
+            )
+        ", $params);
+
         return[
             'status' => 'SUCCESS',
-            'message' => 'teste',
-            'results' => $this->params
+            'message' => 'Novo cliente adicionado',
+            'results' => []
         ];
     }
     // ===============================================================

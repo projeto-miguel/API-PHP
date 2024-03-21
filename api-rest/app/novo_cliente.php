@@ -6,18 +6,12 @@ require_once ("inc/api_functions.php");
 require_once('inc/functions.php');
 
 if($_SERVER['REQUEST_METHOD'] ==  'POST'){
-    
     $nome = $_POST['t_nome'];
-    $email = $_POST['t_email'];
     $telefone = $_POST['t_phone'];
-
-    $results = api_request('create_new_client','POST',[
-        'nome' => $nome,
-        'email' => $email,
-        'telefone' => $telefone
-    ]);
-
-    print_data($results);
+    $email = $_POST['t_email'];
+    
+    $results = api_request('create_new_client', 'POST', ['nome' => $nome,'email'=> $email,'telefone'=> $telefone]);
+    
 }
 
 ?>
