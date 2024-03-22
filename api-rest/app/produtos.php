@@ -28,8 +28,18 @@ if($results['data']['status'] == 'SUCCESS'){
         <section class="container">
             <div class="row">
                 <div class="col">
-                    <h2>Produtos</h2>
+
+                    <div class="row">
+                        <div class="col">
+                            <h2>Produtos</h2>
+                        </div>
+                        <div class="col text-end align-self-center">
+                            <a role="button" class="btn btn-primary" href="novo_produto.php">Adicionar produto</a>
+                        </div>
+                    </div>
                     <hr>
+                    
+                    
 
                     <?php if(count($produtos) == 0): ?>
                         <p>Não há produtos registrados</p>

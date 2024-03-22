@@ -34,7 +34,6 @@ if($results['data']['status'] == 'SUCCESS'){
                     <div class="row">
                         <div class="col">
                             <h2>Clientes</h2>
-                            
                         </div>
                         <div class="col text-end align-self-center">
                             <a role="button" class="btn btn-primary" href="novo_cliente.php">Adicionar cliente</a>
@@ -68,7 +67,7 @@ if($results['data']['status'] == 'SUCCESS'){
                                         <td>
                                             <div class="btn-group" role="group" aria-label="Basic outlined example">
                                                 <a role="button" class="btn btn-outline-primary">Editar</a>
-                                                <a role="button" class="btn btn-outline-danger">Deletar</a>
+                                                <a href="delete_cliente.php?id=<?= $c['id_cliente'] ?>" role="button" class="btn btn-outline-danger">Deletar</a>
                                             </div>
                                         </td>
                                     </tr>

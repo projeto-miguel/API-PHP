@@ -9,11 +9,10 @@ $error_msg = '';
 $success_msg = '';
 
 if($_SERVER['REQUEST_METHOD'] ==  'POST'){
-    $nome = $_POST['t_nome'];
-    $telefone = $_POST['t_phone'];
-    $email = $_POST['t_email'];
+    $produto = $_POST['t_produto'];
+    $quantidade = $_POST['n_quantidade'];
     
-    $results = api_request('create_new_client', 'POST', ['nome' => $nome,'email'=> $email,'telefone'=> $telefone]);
+    $results = api_request('create_new_product', 'POST', ['produto' => $produto,'quantidade' => $quantidade]);
     
     if($results['data']['status']=='SUCCESS'){
         $success_msg = $results['data']['message'];
@@ -43,25 +42,20 @@ if($_SERVER['REQUEST_METHOD'] ==  'POST'){
     <section class="container">
         <div class="row my-5">
             <div class="col-sm-7 offset-sm-2 card bg-light p-4">
-                <form action="novo_cliente.php" method="POST">
+                <form action="novo_produto.php" method="POST">
 
                     <div class="mb-3">
-                        <label>Nome completo</label>
-                        <input type="text" class="form-control" name="t_nome">
+                        <label>Nome do produto</label>
+                        <input type="text" class="form-control" name="t_produto">
                     </div>
 
                     <div class="mb-3">
-                        <label>Telefone</label>
-                        <input type="text" class="form-control" name="t_phone">
-                    </div>
-
-                    <div class="mb-3">
-                        <label>Email</label>
-                        <input type="text" class="form-control" name="t_email">
+                        <label>Quantidade</label>
+                        <input type="number" class="form-control" name="n_quantidade">
                     </div>
 
                     <div class="mb-3 text-center">
-                        <a href="clientes.php" role="button" class="btn btn-secondary btn-sm">Cancelar</a>
+                        <a href="produtos.php" role="button" class="btn btn-secondary btn-sm">Cancelar</a>
                         <input type="submit" class="btn btn-primary btn-sm" value="Cadastrar">
                     </div>
 
